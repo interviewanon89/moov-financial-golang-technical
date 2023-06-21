@@ -1,0 +1,14 @@
+BackendHiring:
+  Servers:
+    Public:
+      Bind:
+        Address: ":8216"
+    Admin:
+      Bind:
+        Address: ":8217"
+  Database:
+    DatabaseName: "backendhiring"
+    SQLite:
+      Path: "../../data/backendhiring.db"
+  Gateway:
+    ServiceName: "backendhiring"

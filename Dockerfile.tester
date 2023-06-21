@@ -1,0 +1,10 @@
+FROM golang:1.15-buster as builder
+WORKDIR /src
+
+RUN apt-get install make
+
+COPY go.mod go.sum ./ 
+RUN go mod download
+
+COPY . .
+RUN make test
